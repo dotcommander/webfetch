@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Local Extraction Test</title>
+    <meta name="description" content="A fixture for local extraction.">
+    <meta name="author" content="Ada Lovelace">
+    <meta property="article:published_time" content="2026-08-03T12:00:00Z">
+    <meta property="og:image" content="/images/cover.jpg">
+  </head>
+  <body>
+    <header>Site header</header>
+    <nav>Navigation links</nav>
+    <div class="advertisement">Advertisement</div>
+    <main>
+      <article>
+        <h1>Local Extraction Test</h1>
+        <p>A useful article begins with a clear explanation and enough context for a reader to understand the subject without visiting another page.</p>
+        <p>Readable content should preserve paragraphs, headings, links, code examples, and the relationships between ideas while removing navigation and promotional material.</p>
+        <p>Local extraction gives the caller a deterministic fallback when a remote reader is unavailable or returns a sparse result. It also makes metadata and quality checks available to the command itself.</p>
+        <p>The implementation should remain conservative. It should prefer a smaller correct article over a larger result that includes unrelated sidebars, comments, advertisements, or footer text.</p>
+        <p>Testing uses intentionally noisy pages because real websites contain repeated labels, hidden elements, responsive navigation, partial content selectors, and old table layouts that can confuse a generic parser.</p>
+        <p>When a first pass removes too much content, a bounded retry can relax one rule at a time. The retry should be accepted only when a measurable quality signal improves and the result still passes safety checks.</p>
+        <p>Relative links and images should resolve against the final response URL. Unsafe schemes and attributes should be removed before content is returned to callers or rendered by another tool.</p>
+        <p>Metadata should use deterministic precedence across the document title, standard meta tags, OpenGraph, Twitter cards, canonical URLs, and structured data. Missing fields should remain empty rather than being guessed.</p>
+        <p>These paragraphs intentionally contain enough words to exercise the normal extraction path while keeping the fixture readable. A real implementation can add more site-specific fixtures when a known platform needs specialized handling.</p>
+      </article>
+    </main>
+    <aside class="sidebar">Sidebar noise</aside>
+    <footer>Footer noise</footer>
+  </body>
+</html>

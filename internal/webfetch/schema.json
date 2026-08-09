@@ -1,0 +1,52 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "web_search",
+      "description": "Search the public web and return normalized titles, URLs, publication dates, and highlights.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Natural-language web search query."
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "Maximum number of results to return. Defaults to 10.",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 10
+          },
+          "category": {
+            "type": "string",
+            "description": "Optional provider category such as news."
+          },
+          "include_domains": {
+            "type": "array",
+            "description": "Optional hostname filters such as example.com.",
+            "items": {"type": "string"},
+            "maxItems": 50
+          },
+          "start_published_date": {
+            "type": "string",
+            "description": "Optional lower publication-date bound in RFC3339 or YYYY-MM-DD form."
+          },
+          "include_highlights": {
+            "type": "boolean",
+            "description": "Request provider-generated highlights. Defaults to true.",
+            "default": true
+          },
+          "highlight_sentences": {
+            "type": "integer",
+            "description": "Number of highlight sentences to request. Defaults to 3.",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 3
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  }
+]

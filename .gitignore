@@ -1,0 +1,8 @@
+/webfetch
+.DS_Store
+.env
+.env.*
+!.env.example
+coverage.out
+*.prof
+*.test
